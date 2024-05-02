@@ -205,7 +205,7 @@ async function _init(props) {
           [
             [emoji.id, false],
             [emoji.name, true],
-            [emoji.keywords, false],
+            [emoji.keywords, true],
             [emoji.emoticons, false],
           ]
             .map(([strings, split]) => {

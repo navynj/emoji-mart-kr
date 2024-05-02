@@ -2,21 +2,18 @@
 import { Store } from '../helpers'
 
 const DEFAULTS = [
-  '+1',
-  'grinning',
-  'kissing_heart',
-  'heart_eyes',
-  'laughing',
-  'stuck_out_tongue_winking_eye',
-  'sweat_smile',
-  'joy',
-  'scream',
-  'disappointed',
-  'unamused',
-  'weary',
-  'sob',
-  'sunglasses',
-  'heart',
+  'moneybag',
+  'money_with_wings',
+  'rice',
+  'house',
+  'shopping_trolley',
+  'shopping_bags',
+  'coffee',
+  'cookie',
+  'stethoscope',
+  'dollar',
+  'bank',
+  'credit_card'
 ]
 
 let Index: any | null = null
@@ -82,7 +79,7 @@ function get({ maxFrequentRows, perLine }) {
 
     if (last && emojiIds.indexOf(last) == -1) {
       delete Index[emojiIds[emojiIds.length - 1]]
-      emojiIds.splice(-1, 1, last)
+      emojiIds.unshift(last)
     }
 
     Store.set('frequently', Index)
